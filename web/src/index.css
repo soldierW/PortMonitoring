@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Consolas', 'Monaco', monospace;
+  background: #0a0e14;
+  color: #c5cdd9;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 选中行 */
+.ant-table-row-selected {
+  background-color: rgba(0, 212, 255, 0.08) !important;
+}
+
+.ant-table-row-selected td {
+  background-color: rgba(0, 212, 255, 0.08) !important;
+}
+
+/* 危险端口行 */
+.dangerous-row {
+  background: rgba(255, 77, 79, 0.06) !important;
+  border-left: 3px solid #ff4d4f !important;
+}
+
+.dangerous-row:hover td {
+  background: rgba(255, 77, 79, 0.12) !important;
+}
+
+.dangerous-row-selected,
+.dangerous-row-selected td {
+  background: rgba(255, 77, 79, 0.14) !important;
+}
+
+/* 新端口高亮动画 */
+.highlight-new-port,
+.highlight-new-port td {
+  animation: highlight-flash 2s ease-out;
+  background: rgba(16, 185, 129, 0.15) !important;
+  border-left: 3px solid #10b981 !important;
+}
+
+@keyframes highlight-flash {
+  0% { background: rgba(16, 185, 129, 0.35); }
+  100% { background: rgba(16, 185, 129, 0.15); }
+}
+
+/* 表格深色适配 */
+.ant-table {
+  background: transparent !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #111827 !important;
+  border-bottom: 1px solid #1e293b !important;
+  color: #64748b !important;
+  font-family: 'JetBrains Mono', 'Cascadia Code', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid #1e293b !important;
+  font-family: 'JetBrains Mono', 'Cascadia Code', monospace;
+  font-size: 13px;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(0, 212, 255, 0.04) !important;
+}
+
+.ant-table-tbody > tr.dangerous-row:hover > td {
+  background: rgba(255, 77, 79, 0.12) !important;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1419;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d3748;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a5568;
+}
+
+/* 抽屉深色 */
+.ant-drawer-content {
+  background: #111827 !important;
+}
+
+.ant-drawer-header {
+  background: #0f1419 !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+.ant-drawer-title {
+  color: #e2e8f0 !important;
+}
+
+/* Descriptions 深色 */
+.ant-descriptions-bordered .ant-descriptions-item-label {
+  background: #0f1419 !important;
+  color: #64748b !important;
+}
+
+.ant-descriptions-bordered .ant-descriptions-item-content {
+  background: #111827 !important;
+  color: #c5cdd9 !important;
+}
+
+/* Alert 深色 */
+.ant-alert {
+  border-radius: 6px !important;
+}
+
+/* Collapse 深色 */
+.ant-collapse {
+  background: #0f1419 !important;
+  border-color: #1e293b !important;
+}
+
+.ant-collapse > .ant-collapse-item {
+  border-color: #1e293b !important;
+}
+
+/* Tag 深色 */
+.ant-tag {
+  border-radius: 4px;
+}
+
+/* Statistic 深色 */
+.ant-statistic-title {
+  color: #64748b !important;
+  font-family: 'JetBrains Mono', 'Cascadia Code', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ant-statistic-content {
+  color: #e2e8f0 !important;
+  font-family: 'JetBrains Mono', 'Cascadia Code', monospace;
+}
